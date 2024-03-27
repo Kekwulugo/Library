@@ -1,3 +1,16 @@
+//modal control
+const showBtn = document.querySelector(".new-form");
+const closeBtn = document.querySelector(".close-form");
+const dialog = document.querySelector("dialog");
+
+function openModal (){
+  dialog.showModal();
+}
+
+function closeModal (){
+  dialog.close();
+}
+
 //create library array
 const myLibrary = [];
 
@@ -72,9 +85,13 @@ myLibrary.push(newBook);
 reviewEl.value = "";
 
 renderBooks();
+dialog.close();
 
 
 }
 
 
+
 submitBtn.onclick = addBooktoLibrary;
+showBtn.onclick = openModal;
+closeBtn.onclick = closeModal;
