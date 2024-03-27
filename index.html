@@ -4,8 +4,61 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Library</title>
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <h1>My Library</h1>
+ <button class="new-form">Add New Book</button>
  
+
+  <form action="">
+   
+  <p>Fill out this form to add a new book to your library</p>
+
+  <label for="Title"> Book Title</label>
+  <input type="text" name="Title" id="Title">
+
+  <label for="Authour"> Authour Name</label>
+  <input type="text" name="Authour" id="Authour">
+
+  <label for="Pages"># of Pages</label>
+  <input type="number" name="Pages" id="Pages">
+<div>
+  <label for="Read">Read?</label>
+  <input type="checkbox" value="Yes" checked="checked" name="Read" id="Read"> Yes
+  </div>
+
+  <label for="Review"> What did you think about this book?</label>
+  <input type="textarea" name="Review" id="Review">
+  
+
+  <button type="submit" class="Submit"> Add to my Library</button>
+  
+  
+ </form>
+ 
+
+ <div class="book-container">
+  <div class="book">
+  <h4>Title</h4>
+  <p>Authour</p>
+  <p>Pages</p>
+  <p>Read?</p>
+  </div>
+  <div class="book">
+   <h4>Title</h4>
+   <p>Authour</p>
+   <p>Pages</p>
+   <p>Read?</p>
+  </div>
+  <div class="book">
+   <h4>Title</h4>
+   <p>Authour</p>
+   <p>Pages</p>
+   <p>Read?</p>
+  </div>
+
+ </div>
+ <script src="script.js"></script>
 </body>
 </html>
