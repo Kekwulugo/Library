@@ -1,0 +1,127 @@
+@font-face {
+ font-family: 'Roboto';
+ src: url(Roboto-Regular.ttf);
+}
+
+@font-face {
+ font-family: 'Roboto Bold';
+ src: url(Roboto-Bold.ttf);
+}
+
+*{
+ font-family: 'Roboto';
+ margin: 0;
+ padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+ font-family: 'Roboto Bold';
+}
+
+
+body{
+ margin: auto;
+ background-color: #FFFff0;
+}
+
+h1{
+ box-shadow:0 1px 30px rgba(0, 0, 0, 0.5);
+ padding: 1rem;
+ text-align: center;
+ background-color: #f43f5e;
+ color: white;
+}
+
+dialog{
+ border: 5px solid #e11d48;
+}
+
+form{
+ margin: 0 1rem 1rem 1rem;
+ padding: 1rem;
+ max-width: fit-content;
+ display: flex;
+ flex-direction: column;
+ background-color: white;
+}
+
+input{
+ border: 1px solid #e11d48;
+ border-radius: 20px;
+ margin: 1rem;
+ max-width: 300px;
+ min-height: 25px;
+ padding: 10px;
+ 
+}
+
+label{
+ margin-left: 1rem ;
+ margin-top: 1rem;
+}
+
+button{
+ margin: 1rem;
+ padding: 1rem;
+ border-radius: 20px;
+ border: none;
+ max-width: fit-content;
+ border: 1px solid #fda4af;
+ background-color: #f43f5e;
+ color: white;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+
+}
+
+button:hover{
+ background-color: white;
+ color: #e11d48;
+}
+
+.delete{
+ 
+ background-color: red;
+
+}
+
+.status{
+ background-color: green;
+ border: 1px solid green;
+
+}
+
+.new-form {
+ margin-left: 3rem;
+}
+
+.book-container{
+ display: flex;
+ flex-wrap: wrap;
+ margin: 3rem;
+ 
+}
+
+@media  (max-width:1000px) {
+ .book-container{
+  flex-direction: column;
+ }
+}
+
+.book{
+ max-width: 400px;
+ padding: 1rem;
+ margin: 2rem;
+ border: 2px solid #e11d48;
+ border-radius: 30px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ background-color: white;
+}
+
+.book > p, .book > h3{
+ margin: 10px;
+}
+
+footer{
+ background-color: #f43f5e;
+}
