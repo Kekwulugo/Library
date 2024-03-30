@@ -53,6 +53,13 @@ bookContainer.innerHTML = "";
   deleteBtn.classList.add("delete");
   deleteBtn.setAttribute("data-id", i);
 
+  //add event listener to delete buttons
+
+  deleteBtn.addEventListener("click", () => {
+    myLibrary.splice(i,1);
+    renderBooks();
+  });
+
   const readBtn = document.createElement("button");
   readBtn.classList.add("status");
   readBtn.setAttribute("data-id", i);
@@ -62,7 +69,16 @@ bookContainer.innerHTML = "";
 
   } else{
     readBtn.innerText = "Mark as Read";
-  }
+  };
+
+  //add event listener to read status buttons
+
+  readBtn.addEventListener("click", ()=> {
+    myLibrary[i].Read = !myLibrary[i].Read;
+    console.log(myLibrary[i].Read);
+    renderBooks();
+
+  });
   
   
   libraryItem.appendChild(Title);
@@ -108,27 +124,6 @@ reviewEl.value = "";
 renderBooks();
 dialog.close();
 }
-
-function removeBooks(event){
-  const item = event.dataset.id;
-  myLibrary.pop(item);
-  renderBooks();
-
-
-}
-
-function updateStatus(event){
-
-  //get book id
-
-  // get current status
-
-  // toggle status (read or unread)
-
-  renderBooks();
-
-}
-
 
 
 
