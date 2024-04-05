@@ -55,6 +55,10 @@ input{
  
 }
 
+input:invalid{
+ border: 1px solid red;
+}
+
 label{
  margin-left: 1rem ;
  margin-top: 1rem;
