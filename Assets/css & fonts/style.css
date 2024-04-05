@@ -1,4 +1,4 @@
-@font-face {
+uired@font-face {
  font-family: 'Roboto';
  src: url(Roboto-Regular.ttf);
 }
@@ -55,7 +55,7 @@ input{
  
 }
 
-input:invalid{
+input:required{
  border: 1px solid red;
 }
 
