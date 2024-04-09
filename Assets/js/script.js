@@ -18,14 +18,19 @@ const myLibrary = [];
 
 
 //object constructor to create new book objects
-function Book (Title, Authour, Pages, Read, Review){
- this.Title = Title;
- this.Authour = Authour;
- this.Pages = Pages;
- this.Read = Read;
- this.Review = Review;
- 
+
+class Book {
+  constructor(Title, Authour, Pages, Read, Review){
+    this.Title = Title;
+    this.Authour = Authour;
+    this.Pages = Pages;
+    this.Read = Read;
+    this.Review = Review;
+
+  }
 }
+
+
 
 function renderBooks(){
 const bookContainer = document.querySelector(".book-container")
@@ -112,7 +117,7 @@ function addBooktoLibrary(event){
  let bookReview = reviewEl.value;
 
 
-const newBook = new Book (bookTitle, bookAuthour, bookPages, bookRead, bookReview);
+let newBook = new Book (bookTitle, bookAuthour, bookPages, bookRead, bookReview);
 myLibrary.push(newBook);
 
 //reset form
