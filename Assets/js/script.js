@@ -110,11 +110,22 @@ function addBooktoLibrary(event){
  //prevent page from reloading when submitting form
  event.preventDefault();
 
+ 
+
  let bookTitle = titleEl.value;
  let bookAuthour = authourEl.value;
  let bookPages = pagesEl.value;
  let bookRead = readEl.checked;
  let bookReview = reviewEl.value;
+
+ // Form Validation
+
+ if(bookTitle === "" || bookAuthour === "" || bookPages === ""){
+  let validationMessage = document.querySelector("p");
+  validationMessage.innerText = "Please fill in the required fields below!";
+  console.log("Blank answers!");
+
+ } else{
 
 
 let newBook = new Book (bookTitle, bookAuthour, bookPages, bookRead, bookReview);
@@ -128,6 +139,7 @@ reviewEl.value = "";
 
 renderBooks();
 dialog.close();
+}
 }
 
 

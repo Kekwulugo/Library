@@ -56,7 +56,15 @@ input{
 }
 
 input:required{
+ background-color: aliceblue;
+}
+
+input:required:invalid {
  border: 1px solid red;
+}
+
+input:valid{
+ background-color: white;
 }
 
 label{
@@ -128,4 +136,8 @@ button:hover{
 
 footer{
  background-color: #f43f5e;
+}
+
+span{
+ color: red;
 }
